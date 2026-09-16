@@ -1,4 +1,5 @@
 # Simulador de fila - Simulacao e Metodos Analiticos
+# chegadas entre 3...5, atendimento entre 4...5, primeiro cliente em t=3.0
 
 # gerador de numeros pseudoaleatorios (metodo congruente linear)
 a = 1103515245
@@ -85,12 +86,12 @@ def roda_simulacao(nome, k, servidores):
 
     K = k
     num_servidores = servidores
-    ta_min, ta_max = 2.0, 5.0
-    ts_min, ts_max = 3.0, 5.0
+    ta_min, ta_max = 3.0, 5.0
+    ts_min, ts_max = 4.0, 5.0
     tempos = [0] * (K + 1)
 
-    # primeiro cliente chega em t = 2.0 (fila comeca vazia)
-    agenda(2.0, "chegada")
+    # primeiro cliente chega em t = 3.0 (fila comeca vazia)
+    agenda(3.0, "chegada")
 
     while contador > 0:
         evento = NextEvent()
